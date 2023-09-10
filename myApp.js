@@ -6,6 +6,8 @@ app.get("/", (req, res) => {
     res.sendFile(absolutePath = __dirname + '/views/index.html');
 });
 
+app.use("/public", express.static(__dirname + "/public"));
+
 console.log("Hello World");
 
 
