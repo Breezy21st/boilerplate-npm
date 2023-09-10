@@ -2,6 +2,18 @@ let express = require('express');
 let app = express();
 require("dotenv").config();
 
+// Logger middleware
+app.use((req, res, next) => {
+    const logString = req.method + " " + req.path + " - " + req.ip;
+    console.log(logString);
+    next(); // Call next() to continue processing the request
+  });
+  
+  app.get('/', (req, res) => {
+    res.send('Homepage');
+  });
+
+
 app.get("/", (req, res) => {
     
     res.sendFile(absolutePath = __dirname + '/views/index.html');
@@ -19,7 +31,6 @@ app.get("/json", (req, res) => {
         res.json({ message: "Hello json" });
     }
 });
-
 
 
 
