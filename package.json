@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"version": "1.2.0",
 	"dependencies": {
-		"@freecodecamp/example": "MAJORversion1.MINORversion2.PATCHversion13",
+		"@freecodecamp/example": "MAJOR version 2.MINOR version 2.PATCH version 13",
 		"express": "^4.14.0"
 	},
 	"main": "server.js",
